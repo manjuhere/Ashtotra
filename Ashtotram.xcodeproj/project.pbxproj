@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7814DCE81D5B6A56003C3BBD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7814DCE71D5B6A56003C3BBD /* main.m */; };
+		7814DCEB1D5B6A56003C3BBD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7814DCEA1D5B6A56003C3BBD /* AppDelegate.m */; };
+		7814DCEE1D5B6A56003C3BBD /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7814DCED1D5B6A56003C3BBD /* MasterViewController.m */; };
+		7814DCF11D5B6A56003C3BBD /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7814DCF01D5B6A56003C3BBD /* DetailViewController.m */; };
+		7814DCF41D5B6A56003C3BBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7814DCF21D5B6A56003C3BBD /* Main.storyboard */; };
+		7814DCF61D5B6A56003C3BBD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7814DCF51D5B6A56003C3BBD /* Images.xcassets */; };
+		7814DCF91D5B6A56003C3BBD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7814DCF71D5B6A56003C3BBD /* LaunchScreen.xib */; };
+		7814DD051D5B6A56003C3BBD /* AshtotramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7814DD041D5B6A56003C3BBD /* AshtotramTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7814DCFF1D5B6A56003C3BBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7814DCDA1D5B6A56003C3BBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7814DCE11D5B6A56003C3BBD;
+			remoteInfo = Ashtotram;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7814DCE21D5B6A56003C3BBD /* Ashtotram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ashtotram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7814DCE61D5B6A56003C3BBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7814DCE71D5B6A56003C3BBD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7814DCE91D5B6A56003C3BBD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7814DCEA1D5B6A56003C3BBD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7814DCEC1D5B6A56003C3BBD /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		7814DCED1D5B6A56003C3BBD /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		7814DCEF1D5B6A56003C3BBD /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		7814DCF01D5B6A56003C3BBD /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		7814DCF31D5B6A56003C3BBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7814DCF51D5B6A56003C3BBD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7814DCF81D5B6A56003C3BBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		7814DCFE1D5B6A56003C3BBD /* AshtotramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AshtotramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7814DD031D5B6A56003C3BBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7814DD041D5B6A56003C3BBD /* AshtotramTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AshtotramTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7814DCDF1D5B6A56003C3BBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7814DCFB1D5B6A56003C3BBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7814DCD91D5B6A56003C3BBD = {
+			isa = PBXGroup;
+			children = (
+				7814DCE41D5B6A56003C3BBD /* Ashtotram */,
+				7814DD011D5B6A56003C3BBD /* AshtotramTests */,
+				7814DCE31D5B6A56003C3BBD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7814DCE31D5B6A56003C3BBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7814DCE21D5B6A56003C3BBD /* Ashtotram.app */,
+				7814DCFE1D5B6A56003C3BBD /* AshtotramTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7814DCE41D5B6A56003C3BBD /* Ashtotram */ = {
+			isa = PBXGroup;
+			children = (
+				7814DCE91D5B6A56003C3BBD /* AppDelegate.h */,
+				7814DCEA1D5B6A56003C3BBD /* AppDelegate.m */,
+				7814DCEC1D5B6A56003C3BBD /* MasterViewController.h */,
+				7814DCED1D5B6A56003C3BBD /* MasterViewController.m */,
+				7814DCEF1D5B6A56003C3BBD /* DetailViewController.h */,
+				7814DCF01D5B6A56003C3BBD /* DetailViewController.m */,
+				7814DCF21D5B6A56003C3BBD /* Main.storyboard */,
+				7814DCF51D5B6A56003C3BBD /* Images.xcassets */,
+				7814DCF71D5B6A56003C3BBD /* LaunchScreen.xib */,
+				7814DCE51D5B6A56003C3BBD /* Supporting Files */,
+			);
+			path = Ashtotram;
+			sourceTree = "<group>";
+		};
+		7814DCE51D5B6A56003C3BBD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7814DCE61D5B6A56003C3BBD /* Info.plist */,
+				7814DCE71D5B6A56003C3BBD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7814DD011D5B6A56003C3BBD /* AshtotramTests */ = {
+			isa = PBXGroup;
+			children = (
+				7814DD041D5B6A56003C3BBD /* AshtotramTests.m */,
+				7814DD021D5B6A56003C3BBD /* Supporting Files */,
+			);
+			path = AshtotramTests;
+			sourceTree = "<group>";
+		};
+		7814DD021D5B6A56003C3BBD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7814DD031D5B6A56003C3BBD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7814DCE11D5B6A56003C3BBD /* Ashtotram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7814DD081D5B6A56003C3BBD /* Build configuration list for PBXNativeTarget "Ashtotram" */;
+			buildPhases = (
+				7814DCDE1D5B6A56003C3BBD /* Sources */,
+				7814DCDF1D5B6A56003C3BBD /* Frameworks */,
+				7814DCE01D5B6A56003C3BBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ashtotram;
+			productName = Ashtotram;
+			productReference = 7814DCE21D5B6A56003C3BBD /* Ashtotram.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7814DCFD1D5B6A56003C3BBD /* AshtotramTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7814DD0B1D5B6A56003C3BBD /* Build configuration list for PBXNativeTarget "AshtotramTests" */;
+			buildPhases = (
+				7814DCFA1D5B6A56003C3BBD /* Sources */,
+				7814DCFB1D5B6A56003C3BBD /* Frameworks */,
+				7814DCFC1D5B6A56003C3BBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7814DD001D5B6A56003C3BBD /* PBXTargetDependency */,
+			);
+			name = AshtotramTests;
+			productName = AshtotramTests;
+			productReference = 7814DCFE1D5B6A56003C3BBD /* AshtotramTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7814DCDA1D5B6A56003C3BBD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Great Apps";
+				TargetAttributes = {
+					7814DCE11D5B6A56003C3BBD = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					7814DCFD1D5B6A56003C3BBD = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 7814DCE11D5B6A56003C3BBD;
+					};
+				};
+			};
+			buildConfigurationList = 7814DCDD1D5B6A56003C3BBD /* Build configuration list for PBXProject "Ashtotram" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7814DCD91D5B6A56003C3BBD;
+			productRefGroup = 7814DCE31D5B6A56003C3BBD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7814DCE11D5B6A56003C3BBD /* Ashtotram */,
+				7814DCFD1D5B6A56003C3BBD /* AshtotramTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7814DCE01D5B6A56003C3BBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7814DCF41D5B6A56003C3BBD /* Main.storyboard in Resources */,
+				7814DCF91D5B6A56003C3BBD /* LaunchScreen.xib in Resources */,
+				7814DCF61D5B6A56003C3BBD /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7814DCFC1D5B6A56003C3BBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7814DCDE1D5B6A56003C3BBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7814DCEB1D5B6A56003C3BBD /* AppDelegate.m in Sources */,
+				7814DCEE1D5B6A56003C3BBD /* MasterViewController.m in Sources */,
+				7814DCE81D5B6A56003C3BBD /* main.m in Sources */,
+				7814DCF11D5B6A56003C3BBD /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7814DCFA1D5B6A56003C3BBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7814DD051D5B6A56003C3BBD /* AshtotramTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7814DD001D5B6A56003C3BBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7814DCE11D5B6A56003C3BBD /* Ashtotram */;
+			targetProxy = 7814DCFF1D5B6A56003C3BBD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7814DCF21D5B6A56003C3BBD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7814DCF31D5B6A56003C3BBD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7814DCF71D5B6A56003C3BBD /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7814DCF81D5B6A56003C3BBD /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7814DD061D5B6A56003C3BBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7814DD071D5B6A56003C3BBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7814DD091D5B6A56003C3BBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Ashtotram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7814DD0A1D5B6A56003C3BBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Ashtotram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7814DD0C1D5B6A56003C3BBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AshtotramTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ashtotram.app/Ashtotram";
+			};
+			name = Debug;
+		};
+		7814DD0D1D5B6A56003C3BBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AshtotramTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ashtotram.app/Ashtotram";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7814DCDD1D5B6A56003C3BBD /* Build configuration list for PBXProject "Ashtotram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7814DD061D5B6A56003C3BBD /* Debug */,
+				7814DD071D5B6A56003C3BBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7814DD081D5B6A56003C3BBD /* Build configuration list for PBXNativeTarget "Ashtotram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7814DD091D5B6A56003C3BBD /* Debug */,
+				7814DD0A1D5B6A56003C3BBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7814DD0B1D5B6A56003C3BBD /* Build configuration list for PBXNativeTarget "AshtotramTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7814DD0C1D5B6A56003C3BBD /* Debug */,
+				7814DD0D1D5B6A56003C3BBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7814DCDA1D5B6A56003C3BBD /* Project object */;
+}
