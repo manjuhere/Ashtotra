@@ -8,10 +8,14 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "LoginViewController.h"
+#import "InfoViewController.h"
+#import "AppDelegate.h"
 
 @interface MasterViewController ()
 
 @property NSMutableArray *objects;
+
 @end
 
 @implementation MasterViewController
@@ -27,11 +31,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
-    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    self.navigationItem.leftBarButtonItem = addButton;
+    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];    
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSLog(@"Ashtotram: MasterVC: viewDidAppear:");
+    AppDelegate *ad = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    if(!ad._loggedIn && ![FBSDKAccessToken currentAccessToken])
+    {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        LoginViewController *vc =  (LoginViewController*)[storyboard instantiateViewControllerWithIdentifier:@"loginViewController"];
+        NSLog(@"Ashtotram: MasterVC: viewDidAppear: Not Logged in, putting up login screen.");
+        [vc setModalPresentationStyle:UIModalPresentationFullScreen];
+        [self presentViewController:vc animated:YES completion:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,6 +75,13 @@
         [controller setDetailItem:object];
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
+        if (UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation)) {
+            [UIView animateWithDuration:0.5 animations:^{
+                self.splitViewController.preferredDisplayMode = UISplitViewControllerDisplayModePrimaryHidden;
+            } completion:^(BOOL finished) {
+                self.splitViewController.preferredDisplayMode = UISplitViewControllerDisplayModeAutomatic;
+            }];
+        }
     }
 }
 
@@ -73,24 +97,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
     NSDate *object = self.objects[indexPath.row];
     cell.textLabel.text = [object description];
+//    if ([[object description] isEqualToString:@"Ganesha"]) {
+//        cell.imageView.image = [UIImage imageNamed:@"Ganesha.jpg"];
+//    }
     return cell;
-}
-
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
 }
 
 @end

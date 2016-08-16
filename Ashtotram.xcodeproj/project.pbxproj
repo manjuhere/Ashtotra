@@ -24,6 +24,8 @@
 		7814DD1E1D5B6CEE003C3BBD /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7814DD171D5B6CEE003C3BBD /* FBSDKMessengerShareKit.framework */; };
 		7814DD1F1D5B6CEE003C3BBD /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7814DD181D5B6CEE003C3BBD /* FBSDKShareKit.framework */; };
 		7814DD211D5B71FA003C3BBD /* ancient scroll 1024x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 7814DD201D5B71FA003C3BBD /* ancient scroll 1024x1024.png */; };
+		7823A2B01D61DFE300B69709 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7823A2AF1D61DFE300B69709 /* InfoViewController.m */; };
+		78CB962A1D63BBA60080797F /* Ganesha.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 78CB96291D63BBA60080797F /* Ganesha.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +63,10 @@
 		7814DD161D5B6CEE003C3BBD /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		7814DD171D5B6CEE003C3BBD /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
 		7814DD181D5B6CEE003C3BBD /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
-		7814DD201D5B71FA003C3BBD /* ancient scroll 1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ancient scroll 1024x1024.png"; sourceTree = "<group>"; };
+		7814DD201D5B71FA003C3BBD /* ancient scroll 1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ancient scroll 1024x1024.png"; path = "../ancient scroll 1024x1024.png"; sourceTree = "<group>"; };
+		7823A2AE1D61DFE300B69709 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		7823A2AF1D61DFE300B69709 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		78CB96291D63BBA60080797F /* Ganesha.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ganesha.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +100,6 @@
 				7814DCE41D5B6A56003C3BBD /* Ashtotram */,
 				7814DD011D5B6A56003C3BBD /* AshtotramTests */,
 				7814DCE31D5B6A56003C3BBD /* Products */,
-				7814DD201D5B71FA003C3BBD /* ancient scroll 1024x1024.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,17 +115,20 @@
 		7814DCE41D5B6A56003C3BBD /* Ashtotram */ = {
 			isa = PBXGroup;
 			children = (
+				7814DCF71D5B6A56003C3BBD /* LaunchScreen.xib */,
 				7814DCE91D5B6A56003C3BBD /* AppDelegate.h */,
 				7814DCEA1D5B6A56003C3BBD /* AppDelegate.m */,
+				7814DCF21D5B6A56003C3BBD /* Main.storyboard */,
 				7814DD0E1D5B6B65003C3BBD /* LoginViewController.h */,
 				7814DD0F1D5B6B65003C3BBD /* LoginViewController.m */,
 				7814DCEC1D5B6A56003C3BBD /* MasterViewController.h */,
 				7814DCED1D5B6A56003C3BBD /* MasterViewController.m */,
+				7823A2AE1D61DFE300B69709 /* InfoViewController.h */,
+				7823A2AF1D61DFE300B69709 /* InfoViewController.m */,
 				7814DCEF1D5B6A56003C3BBD /* DetailViewController.h */,
 				7814DCF01D5B6A56003C3BBD /* DetailViewController.m */,
-				7814DCF21D5B6A56003C3BBD /* Main.storyboard */,
 				7814DCF51D5B6A56003C3BBD /* Images.xcassets */,
-				7814DCF71D5B6A56003C3BBD /* LaunchScreen.xib */,
+				7858F7A01D618F5700B382D1 /* Resources */,
 				7814DCE51D5B6A56003C3BBD /* Supporting Files */,
 			);
 			path = Ashtotram;
@@ -166,6 +173,15 @@
 			);
 			name = "Login Frameworks";
 			path = Ashtotram;
+			sourceTree = "<group>";
+		};
+		7858F7A01D618F5700B382D1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				78CB96291D63BBA60080797F /* Ganesha.jpg */,
+				7814DD201D5B71FA003C3BBD /* ancient scroll 1024x1024.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +269,7 @@
 				7814DD211D5B71FA003C3BBD /* ancient scroll 1024x1024.png in Resources */,
 				7814DCF61D5B6A56003C3BBD /* Images.xcassets in Resources */,
 				7814DD1A1D5B6CEE003C3BBD /* FacebookSDKStrings.bundle in Resources */,
+				78CB962A1D63BBA60080797F /* Ganesha.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +289,7 @@
 			files = (
 				7814DCEB1D5B6A56003C3BBD /* AppDelegate.m in Sources */,
 				7814DCEE1D5B6A56003C3BBD /* MasterViewController.m in Sources */,
+				7823A2B01D61DFE300B69709 /* InfoViewController.m in Sources */,
 				7814DCE81D5B6A56003C3BBD /* main.m in Sources */,
 				7814DCF11D5B6A56003C3BBD /* DetailViewController.m in Sources */,
 				7814DD101D5B6B65003C3BBD /* LoginViewController.m in Sources */,
@@ -479,6 +497,7 @@
 				7814DD0A1D5B6A56003C3BBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7814DD0B1D5B6A56003C3BBD /* Build configuration list for PBXNativeTarget "AshtotramTests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +506,7 @@
 				7814DD0D1D5B6A56003C3BBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

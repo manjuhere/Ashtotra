@@ -7,22 +7,16 @@
 //
 
 #import "LoginViewController.h"
-
+#import "AppDelegate.h"
 @interface LoginViewController ()
-
-@property (nonatomic) BOOL loginStatus;
 
 @end
 
-@implementation LoginViewController {
-    NSArray *ashList;
-}
-
+@implementation LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    ashList = [NSArray arrayWithObjects:@"Shiva", @"Ganesh", @"Lakshmi",nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,13 +26,20 @@
 
 -(IBAction)loginButtonClicked:(id)sender
 {
-    FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
-    if (![FBSDKAccessToken currentAccessToken]) {
-        [login logInWithReadPermissions: @[@"public_profile", @"email"]
+    if ([self loginFB]) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+
+}
+
+-(BOOL)loginFB  {
+    AppDelegate *ad = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    if (![FBSDKAccessToken currentAccessToken]) {   //No FB Access token, so get the token.
+        [ad.login logInWithReadPermissions: @[@"public_profile", @"email"]
                                 handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
                                     if (error) {
-                                        NSLog(@"Process error");
-                                        NSLog(@"Unexpected login error: %@", error);
+                                        NSLog(@"Ashtotram: LoginVC: FbHandler: Process error");
+                                        NSLog(@"Ashtotram: LoginVC: FbHandler: Unexpected login error: %@", error);
                                         NSString *alertMessage = error.userInfo[FBSDKErrorLocalizedDescriptionKey] ?: @"There was a problem logging in. Please try again later.";
                                         NSString *alertTitle = error.userInfo[FBSDKErrorLocalizedTitleKey] ?: @"Oops";
                                         [[[UIAlertView alloc] initWithTitle:alertTitle
@@ -47,7 +48,7 @@
                                                           cancelButtonTitle:@"OK"
                                                           otherButtonTitles:nil] show];
                                     } else if (result.isCancelled) {
-                                        NSLog(@"Cancelled");
+                                        NSLog(@"Ashtotram: LoginVC: FbHandler: Login Cancelled");
                                         NSString *alertMessage = error.userInfo[FBSDKErrorLocalizedDescriptionKey] ?: @"Please Enable Permissions to Proceed further.";
                                         NSString *alertTitle = error.userInfo[FBSDKErrorLocalizedTitleKey] ?: @"Permission Denied";
                                         [[[UIAlertView alloc] initWithTitle:alertTitle
@@ -57,19 +58,18 @@
                                                           otherButtonTitles:nil] show];
                                         
                                     } else {
-                                        NSLog(@"Logged in");
-                                        NSLog(@"Result : %@", result.token);
-                                        self.loginStatus = YES;
-                                        [self loadDestinationVC];
+                                        NSLog(@"Ashtotram: LoginVC: FbHandler: Logged in Successfully ");
+                                        NSLog(@"Ashtotram: LoginVC: FbHandler: Logged in with User ID : %@", result.token.userID);
+                                        NSLog(@"Ashtotram: LoginVC: FbHandler: Logged in with token : %@", [FBSDKAccessToken currentAccessToken]);
+                                        ad._loggedIn = YES;
+                                        [self dismissViewControllerAnimated:YES completion:nil];
                                     }
                                 }];
+    } else  {   //FB Token exists so set authenticated as true
+        NSLog(@"Ashtotram: LoginVC: Logged in with token : %@", [FBSDKAccessToken currentAccessToken]);
+        ad._loggedIn = YES;
     }
-}
-
--(void)loadDestinationVC{
-    if(self.loginStatus == YES){
-        [self shouldPerformSegueWithIdentifier:@"loginConditionSegue" sender:self];
-    }
+    return ad._loggedIn;
 }
 
 /*

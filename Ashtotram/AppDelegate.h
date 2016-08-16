@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FBSDKLoginKit/FBSDKLoginKit.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+@property (nonatomic) BOOL _loggedIn;
+@property (strong, nonatomic) FBSDKLoginManager *login;
 @property (strong, nonatomic) UIWindow *window;
 
 

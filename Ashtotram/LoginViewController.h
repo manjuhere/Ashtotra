@@ -11,9 +11,6 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface LoginViewController : UIViewController
-
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
-
 - (IBAction)loginButtonClicked:(id)sender;
-
 @end

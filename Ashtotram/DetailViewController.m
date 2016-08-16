@@ -7,6 +7,8 @@
 //
 
 #import "DetailViewController.h"
+#import "AppDelegate.h"
+#import "LoginViewController.h"
 
 @interface DetailViewController ()
 
@@ -36,6 +38,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSLog(@"Ashtotram: DetailVC: viewDidAppear:");
+    if(![FBSDKAccessToken currentAccessToken] && ![FBSDKAccessToken currentAccessToken])
+    {
+        NSLog(@"Ashtotram: DetailVC: viewDidAppear: Not Logged in, displaying login screen.");
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        LoginViewController *vc =  (LoginViewController*)[storyboard instantiateViewControllerWithIdentifier:@"loginViewController"];
+        [vc setModalPresentationStyle:UIModalPresentationFullScreen];
+        [self.view.window.rootViewController presentViewController:vc animated:YES completion:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

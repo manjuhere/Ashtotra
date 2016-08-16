@@ -20,11 +20,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    /*UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+    self.login = [[FBSDKLoginManager alloc] init];
+    if ([FBSDKAccessToken currentAccessToken])  {   //if a FBaccess token exists before launch, set authenticated to YES.
+        self._loggedIn = YES;
+    } else  {
+        self._loggedIn = NO;
+    }
+    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
     UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
     navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
     splitViewController.delegate = self;
-    */
     [FBSDKProfile enableUpdatesOnAccessTokenChange:YES];
     return [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
 }
