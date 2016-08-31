@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		780C0C961D756CE20024C30A /* ashtotra_db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 780C0C951D756CE20024C30A /* ashtotra_db.sqlite */; };
 		7814DCE81D5B6A56003C3BBD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7814DCE71D5B6A56003C3BBD /* main.m */; };
 		7814DCEB1D5B6A56003C3BBD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7814DCEA1D5B6A56003C3BBD /* AppDelegate.m */; };
 		7814DCEE1D5B6A56003C3BBD /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7814DCED1D5B6A56003C3BBD /* MasterViewController.m */; };
@@ -24,7 +25,11 @@
 		7814DD1E1D5B6CEE003C3BBD /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7814DD171D5B6CEE003C3BBD /* FBSDKMessengerShareKit.framework */; };
 		7814DD1F1D5B6CEE003C3BBD /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7814DD181D5B6CEE003C3BBD /* FBSDKShareKit.framework */; };
 		7814DD211D5B71FA003C3BBD /* ancient scroll 1024x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 7814DD201D5B71FA003C3BBD /* ancient scroll 1024x1024.png */; };
+		781995261D7077E600E534FD /* AshtotraInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 781995251D7077E600E534FD /* AshtotraInfo.m */; };
+		781995291D70798500E534FD /* AshtotraDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 781995281D70798500E534FD /* AshtotraDatabase.m */; };
 		7823A2B01D61DFE300B69709 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7823A2AF1D61DFE300B69709 /* InfoViewController.m */; };
+		782EDCFB1D6F7F85002536CA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 782EDCFA1D6F7F85002536CA /* libsqlite3.dylib */; };
+		785969811D69AA7000303B1B /* info.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 785969801D69AA7000303B1B /* info.jpg */; };
 		78CB962A1D63BBA60080797F /* Ganesha.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 78CB96291D63BBA60080797F /* Ganesha.jpg */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		780C0C951D756CE20024C30A /* ashtotra_db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ashtotra_db.sqlite; sourceTree = "<group>"; };
 		7814DCE21D5B6A56003C3BBD /* Ashtotram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ashtotram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7814DCE61D5B6A56003C3BBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7814DCE71D5B6A56003C3BBD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -64,8 +70,14 @@
 		7814DD171D5B6CEE003C3BBD /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
 		7814DD181D5B6CEE003C3BBD /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		7814DD201D5B71FA003C3BBD /* ancient scroll 1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ancient scroll 1024x1024.png"; path = "../ancient scroll 1024x1024.png"; sourceTree = "<group>"; };
+		781995241D7077E600E534FD /* AshtotraInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AshtotraInfo.h; path = "Model Files/AshtotraInfo.h"; sourceTree = "<group>"; };
+		781995251D7077E600E534FD /* AshtotraInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AshtotraInfo.m; path = "Model Files/AshtotraInfo.m"; sourceTree = "<group>"; };
+		781995271D70798500E534FD /* AshtotraDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AshtotraDatabase.h; path = "Model Files/AshtotraDatabase.h"; sourceTree = "<group>"; };
+		781995281D70798500E534FD /* AshtotraDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AshtotraDatabase.m; path = "Model Files/AshtotraDatabase.m"; sourceTree = "<group>"; };
 		7823A2AE1D61DFE300B69709 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		7823A2AF1D61DFE300B69709 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		782EDCFA1D6F7F85002536CA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		785969801D69AA7000303B1B /* info.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = info.jpg; sourceTree = "<group>"; };
 		78CB96291D63BBA60080797F /* Ganesha.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ganesha.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				782EDCFB1D6F7F85002536CA /* libsqlite3.dylib in Frameworks */,
 				7814DD191D5B6CEE003C3BBD /* Bolts.framework in Frameworks */,
 				7814DD1C1D5B6CEE003C3BBD /* FBSDKCoreKit.framework in Frameworks */,
 				7814DD1F1D5B6CEE003C3BBD /* FBSDKShareKit.framework in Frameworks */,
@@ -130,6 +143,10 @@
 				7814DCF51D5B6A56003C3BBD /* Images.xcassets */,
 				7858F7A01D618F5700B382D1 /* Resources */,
 				7814DCE51D5B6A56003C3BBD /* Supporting Files */,
+				781995241D7077E600E534FD /* AshtotraInfo.h */,
+				781995251D7077E600E534FD /* AshtotraInfo.m */,
+				781995271D70798500E534FD /* AshtotraDatabase.h */,
+				781995281D70798500E534FD /* AshtotraDatabase.m */,
 			);
 			path = Ashtotram;
 			sourceTree = "<group>";
@@ -163,6 +180,7 @@
 		7814DD111D5B6C9D003C3BBD /* Login Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				782EDCFA1D6F7F85002536CA /* libsqlite3.dylib */,
 				7814DD121D5B6CEE003C3BBD /* Bolts.framework */,
 				7814DD131D5B6CEE003C3BBD /* FacebookSDKStrings.bundle */,
 				7814DD141D5B6CEE003C3BBD /* FBAudienceNetwork.framework */,
@@ -178,6 +196,8 @@
 		7858F7A01D618F5700B382D1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				780C0C951D756CE20024C30A /* ashtotra_db.sqlite */,
+				785969801D69AA7000303B1B /* info.jpg */,
 				78CB96291D63BBA60080797F /* Ganesha.jpg */,
 				7814DD201D5B71FA003C3BBD /* ancient scroll 1024x1024.png */,
 			);
@@ -265,9 +285,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7814DCF41D5B6A56003C3BBD /* Main.storyboard in Resources */,
+				785969811D69AA7000303B1B /* info.jpg in Resources */,
 				7814DCF91D5B6A56003C3BBD /* LaunchScreen.xib in Resources */,
 				7814DD211D5B71FA003C3BBD /* ancient scroll 1024x1024.png in Resources */,
 				7814DCF61D5B6A56003C3BBD /* Images.xcassets in Resources */,
+				780C0C961D756CE20024C30A /* ashtotra_db.sqlite in Resources */,
 				7814DD1A1D5B6CEE003C3BBD /* FacebookSDKStrings.bundle in Resources */,
 				78CB962A1D63BBA60080797F /* Ganesha.jpg in Resources */,
 			);
@@ -287,7 +309,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				781995291D70798500E534FD /* AshtotraDatabase.m in Sources */,
 				7814DCEB1D5B6A56003C3BBD /* AppDelegate.m in Sources */,
+				781995261D7077E600E534FD /* AshtotraInfo.m in Sources */,
 				7814DCEE1D5B6A56003C3BBD /* MasterViewController.m in Sources */,
 				7823A2B01D61DFE300B69709 /* InfoViewController.m in Sources */,
 				7814DCE81D5B6A56003C3BBD /* main.m in Sources */,

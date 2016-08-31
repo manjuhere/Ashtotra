@@ -10,11 +10,13 @@
 #import "DetailViewController.h"
 #import "LoginViewController.h"
 #import "InfoViewController.h"
+#import "AshtotraDatabase.h"
 #import "AppDelegate.h"
 
 @interface MasterViewController ()
 
-@property NSMutableArray *objects;
+@property NSDictionary *objects;
+@property NSArray *sectionTitles;
 
 @end
 
@@ -31,15 +33,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.leftBarButtonItem = addButton;
-    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];    
+    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
-
-- (void) viewDidAppear:(BOOL)animated
-{
+- (void) viewWillAppear:(BOOL)animated  {
     [super viewDidAppear:animated];
-    NSLog(@"Ashtotram: MasterVC: viewDidAppear:");
+    AshtotraInfo *info = [AshtotraInfo sharedInstance];
+    NSDictionary *array = [info getAshtotraList:info.prefLanguage];
+    self.objects = array;
+    self.sectionTitles = [[self.objects allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    [self.tableView reloadData];
+    
+    NSLog(@"Ashtotram: MasterVC: viewWillAppear:");
     AppDelegate *ad = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     if(!ad._loggedIn && ![FBSDKAccessToken currentAccessToken])
     {
@@ -49,6 +53,7 @@
         [vc setModalPresentationStyle:UIModalPresentationFullScreen];
         [self presentViewController:vc animated:YES completion:nil];
     }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,25 +61,21 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)insertNewObject:(id)sender {
-    if (!self.objects) {
-        self.objects = [[NSMutableArray alloc] init];
-    }
-    [self.objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-}
-
 #pragma mark - Segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = self.objects[indexPath.row];
+        NSString *sectionTitle = [self.sectionTitles objectAtIndex:indexPath.section];
+        NSArray *sectionNames = [self.objects objectForKey:sectionTitle];
+        NSString *name = [sectionNames objectAtIndex:indexPath.row];
+
         DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
-        [controller setDetailItem:object];
+        [controller setDetailItem:name];
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
+        
+        //Animate the split view controller going out of view
         if (UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation)) {
             [UIView animateWithDuration:0.5 animations:^{
                 self.splitViewController.preferredDisplayMode = UISplitViewControllerDisplayModePrimaryHidden;
@@ -88,20 +89,29 @@
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return self.sectionTitles.count;
+}
+- (NSString *)tableView:(UITableView *)tableView
+titleForHeaderInSection:(NSInteger)section {
+    return [self.sectionTitles objectAtIndex:section];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.objects.count;
+    NSString *sectionTitle = [self.sectionTitles objectAtIndex:section];
+    NSArray *sectionNames = [self.objects objectForKey:sectionTitle];
+    return sectionNames.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
-//    if ([[object description] isEqualToString:@"Ganesha"]) {
-//        cell.imageView.image = [UIImage imageNamed:@"Ganesha.jpg"];
-//    }
+    //NSString *object = @"HEllo";//self.objects[indexPath.row];
+    
+    NSString *sectionTitle = [self.sectionTitles objectAtIndex:indexPath.section];
+    NSArray *sectionNames = [self.objects objectForKey:sectionTitle];
+    NSString *name = [sectionNames objectAtIndex:indexPath.row];
+    cell.textLabel.text = name;
+    
+    //cell.textLabel.text = [object description];
     return cell;
 }
 

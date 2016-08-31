@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "FBSDKCoreKit/FBSDKCoreKit.h"
+#import "AshtotraInfo.h"
+@interface InfoViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
-@interface InfoViewController : UIViewController
-
+@property (nonatomic) AshtotraInfo *info;
 @property (retain) IBOutlet UIView *dp;
 @property (weak, nonatomic) IBOutlet UILabel *username;
-@property (weak, nonatomic) IBOutlet UILabel *email;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
+
 - (IBAction)backToList:(UIBarButtonItem *)sender;
 - (IBAction)logout:(id)sender;
 

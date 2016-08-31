@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import "AppDelegate.h"
 #import "LoginViewController.h"
+#import "AshtotraInfo.h"
 
 @interface DetailViewController ()
 
@@ -30,17 +31,20 @@
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        NSString *str = [[AshtotraInfo sharedInstance] getDetailAshtotra:[self.detailItem description]];
+        str = [str stringByAppendingString:@"\nCourtest of SanskritDocuments.org"];
+        self.detailDescriptionLabel.text = str;
     }
 }
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    //set nav bar title to reflected ashtotra
+    self.navigationItem.title = [self.detailItem description];
 }
 
-- (void) viewDidAppear:(BOOL)animated
+- (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     NSLog(@"Ashtotram: DetailVC: viewDidAppear:");

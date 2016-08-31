@@ -9,20 +9,24 @@
 #import "InfoViewController.h"
 #import "AppDelegate.h"
 #import "LoginViewController.h"
-
+#import "AshtotraInfo.h"
 @interface InfoViewController ()
 
 @end
 
 @implementation InfoViewController
 
+@synthesize info;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSLog(@"Ashtotram: InfoVC: viewDidLoad:");
+    self.info = [AshtotraInfo sharedInstance];
     self.dp = [[FBSDKProfilePictureView alloc] init];
     self.username.text = @"Manjunath Chandrashekar";
-    self.email.text = @"manjunathchandrashekarhere@ymail.com";
+    [self.info.languagesAvailable sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,7 +35,13 @@
 }
 
 - (IBAction)backToList:(UIBarButtonItem *)sender {
+    NSString *selValue = [self.info.languagesAvailable objectAtIndex:[self.pickerView selectedRowInComponent:0]];
+    [AshtotraInfo sharedInstance].prefLanguage = selValue;
+
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) viewWillDisappear:(BOOL)animated    {
 }
 
 - (IBAction)logout:(id)sender   {
@@ -54,6 +64,30 @@
         }];
         
     }
+}
+
+#pragma mark - UIPickerView methods
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView  {
+    return 1;
+}
+// returns the # of rows in each component..
+- (NSInteger)pickerView:(UIPickerView *)pickerView
+numberOfRowsInComponent:(NSInteger)component {
+    return info.languagesAvailable.count;
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView
+             titleForRow:(NSInteger)row
+            forComponent:(NSInteger)component    {
+    NSString *language = [info.languagesAvailable objectAtIndex:row];
+    if ([language isEqual:@"iast"])  {
+        language = @"English (iast)";
+    }
+    if ([language isEqualToString:@"itrans"])   {
+        language = @"English (itrans)";
+    }
+    
+    return language.capitalizedString;
 }
 
 /*
